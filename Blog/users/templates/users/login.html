@@ -1,0 +1,13 @@
+{% extends 'blogg/base.html' %}
+{% block content %}
+ <form method = "POST">
+     {% csrf_token %} 
+     <fieldset>
+     <legend >  Login    </legend>
+     {{ form.as_p}}
+    </fieldset>
+    <button type = "submit"> login </button>
+
+ </form> 
+ <small> need Account ? <a href="{% url 'register' %}"> Sign IN </a></small>
+{% endblock content %}
